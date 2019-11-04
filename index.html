@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Startseite</title>
+  <script language="javascript" type="text/javascript" src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+<header>
+
+</header>
+<body>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><img id="menuImg" src="img/dreiBalken.png"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a class="logtxt" href="#home">Home</a>
+    <a class="logtxt" href="#about">About</a>
+    <a class="logtxt" href="#contact">Contact</a>
+  </div>
+</div>
+<!-- Button to open the modal login form -->
+  <button  onclick="document.getElementById('id01').style.display='block'">Login</button>
+  <div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/action_page.php">
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+    <br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    <br>
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button onclick="document.getElementById('id01').style.display='none'"
+             title="Close Modal">&times; Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+<div id = "starttext">
+  <br>
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr,<br>
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,<br>
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,<br>
+no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>
+  <br>
+</div>
+
+
+</body>
+<footer>
+
+</footer>
+</html>
