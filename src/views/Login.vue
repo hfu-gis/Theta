@@ -56,7 +56,7 @@
                                     <v-text-field
                                             label="Login"
                                             name="login"
-                                            prepend-icon="person"
+                                            prepend-icon="mdi-account"
                                             type="text"
                                     />
 
@@ -64,14 +64,16 @@
                                             id="password"
                                             label="Password"
                                             name="password"
-                                            prepend-icon="lock"
+                                            prepend-icon="mdi-textbox-password"
                                             type="password"
                                     />
                                 </v-form>
                             </v-card-text>
                             <v-card-actions>
                                 <v-spacer/>
-                                <v-btn color="primary">Login</v-btn>
+                                <v-btn color="primary" to="/home">
+                                    Login
+                                </v-btn>
                             </v-card-actions>
                         </v-card>
                     </v-col>
