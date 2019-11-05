@@ -3,7 +3,7 @@
     <main>
       <header>
         <h1>Grasshoppers Finest THC products
-          <img src="./assets/cannabis.png" width="160"/>
+          <img src="assets/images/cannabis.png" width="160"/>
         </h1>
       </header>
       <article>
