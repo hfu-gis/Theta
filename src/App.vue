@@ -25,7 +25,10 @@
         />
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer/>
+        <v-btn text to="/login">
+          Login
+        </v-btn>
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -38,7 +41,7 @@
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view />
     </v-content>
   </v-app>
 </template>
@@ -56,5 +59,8 @@ export default {
   data: () => ({
     //
   }),
+  created() {
+    this.$router.push({path: '/home'})
+  }
 };
 </script>
