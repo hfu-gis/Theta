@@ -11,7 +11,7 @@ export default new Vuetify({
       light: {
         primary: colors.indigo,
         secondary: colors.amber,
-        accent: '#82B1FF',
+        accent: colors.blue,
         error: '#FF5252',
         info: '#2196F3',
         success: '#4CAF50',
