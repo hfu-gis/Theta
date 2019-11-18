@@ -1,43 +1,66 @@
 <template>
-  <div class="body-1">
-    <!-- HTML-Code aus dem Body-Tag hier einfügen -->
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn"><img id="menuImg" src="img/dreiBalken.png"></button>
-      <div id="myDropdown" class="dropdown-content">
-        <a class="logtxt" href="#home">Home</a>
-        <a class="logtxt" href="#about">About</a>
-        <a class="logtxt" href="#contact">Contact</a>
-      </div>
-    </div>
-  </div>
+  <v-row>
+    <v-col cols="4" md
+      v-for="item in products" :key="item">
+      <v-card elevation="10">
+        <v-img
+          src="http://picsum.photos/140"
+          class="white--text align-end"
+          gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+          height="140"
+        >
+          <v-card-title v-text="item.title"/>
+        </v-img>
+
+        <v-card-actions>
+          <v-spacer/>
+          <v-btn icon>
+            <v-icon>mdi-heart</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>mdi-bookmark</v-icon>
+          </v-btn>
+
+          <v-btn icon>
+            <v-icon>mdi-share-variant</v-icon>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 export default {
 // gebt jeder Page einen eigenen Namen
-name: 'Order',
+  name: 'Order',
 
 // benötigte Komponenten
-components: {},
+  components: {},
 
 // entspricht den HTML-Attributen
-props: {},
+  props: {},
 
 // Variablen-Speicher
-data() {
-  return {
-    products: [],
-    name: {
-      type: String
-    },
-    price: {
-      type: Number
+  data() {
+    return {
+      products: [
+        {title:'Tropfen'},
+        {title:'Verdampfer'},
+        {title:'Cookies'}
+      ],
+      name: {
+        type: String
+      },
+      price: {
+        type: Number
+      }
     }
-  }
-},
+  },
 
 // reagieren auf prop-Veränderung
-watch: {},
+  watch: {},
 
 // interne Methoden
   methods: {
@@ -52,18 +75,18 @@ watch: {},
 
 
 // Initialisierung
-created() {
-  db.collection('products')
-    .then((productsFromDB) => {
-      this.products = productsFromDB
-    })
-    .catch((err) => {
-      console.log('Error getting documents', err)
-    })
-}
+  created() {
+    db.collection('products')
+      .then((productsFromDB) => {
+        this.products = productsFromDB
+      })
+      .catch((err) => {
+        console.log('Error getting documents', err)
+      })
+  }
 }
 </script>
 
 <style scoped>
-/* CSS für diese Seite hier einfügen */
+  /* CSS für diese Seite hier einfügen */
 </style>

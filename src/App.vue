@@ -4,10 +4,9 @@
       v-model="drawer"
       app dark
       right
-      src="http://picsum.photos/256/1080"
     >
       <v-list dense>
-        <v-list-item link>
+        <v-list-item link :to="{name:'Overview'}">
           <v-list-item-action>
             <v-icon>mdi-spa</v-icon>
           </v-list-item-action>
@@ -15,7 +14,7 @@
             <v-list-item-title>Overview</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link :to="{name:'Order'}">
           <v-list-item-action>
             <v-icon>mdi-cart</v-icon>
           </v-list-item-action>
@@ -40,14 +39,6 @@
       src="http://picsum.photos/1920/1080?blur"
       dark
     >
-<!--
-      <template v-slot:img="{ props }">
-        <v-img
-          v-bind="props"
-          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
-        ></v-img>
-      </template>
--->
       <v-toolbar-title>Gras-Shoppers</v-toolbar-title>
       <v-spacer />
       <v-btn icon>

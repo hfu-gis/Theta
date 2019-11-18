@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login'
-import Layout from '../components/Layout'
 import Order from '../views/Order'
 import Overview from '../views/Overview'
+import App from '../App'
 
 Vue.use(VueRouter)
 
@@ -15,23 +15,18 @@ export default new VueRouter({
             component: App
         },
         {
-            path: '/home',
-            name: 'home',
-            component: Layout
-        },
-        {
             path: '/overview',
             name: 'Overview',
             component: Overview
         },
         {
             path: '/login',
-            name: 'login',
+            name: 'Login',
             component: Login
         },
         {
             path: '/order',
-            name: 'order',
+            name: 'Order',
             component: Order
         },
     ]
