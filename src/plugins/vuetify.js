@@ -8,8 +8,8 @@ Vue.use(Vuetify);
 export default new Vuetify({
   theme: {
     themes: {
-      light: {
-        primary: colors.indigo,
+      dark: {
+        primary: colors.teal.darken1,
         secondary: colors.amber,
         accent: colors.blue,
         error: '#FF5252',

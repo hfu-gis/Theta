@@ -1,66 +1,97 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app dark
+      right
+      src="http://picsum.photos/256/1080"
+    >
+      <v-list dense>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-spa</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Overview</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-cart</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Order</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link>
+          <v-list-item-action>
+            <v-icon>mdi-settings</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Country</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-app-bar
       app
-      color="primary"
+      clipped-right
+      src="http://picsum.photos/1920/1080?blur"
       dark
     >
-      <div class="d-flex align-center">
+<!--
+      <template v-slot:img="{ props }">
         <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer/>
-        <v-btn text to="/login">
-          Login
-        </v-btn>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+          v-bind="props"
+          gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+        ></v-img>
+      </template>
+-->
+      <v-toolbar-title>Gras-Shoppers</v-toolbar-title>
+      <v-spacer />
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
       </v-btn>
+      <v-btn icon>
+        <v-icon>mdi-cart</v-icon>
+      </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
     </v-app-bar>
 
-    <v-content>
-      <router-view />
+    <v-content light>
+      <v-container
+        class="fill-height"
+        fluid
+      >
+        <router-view/>
+      </v-container>
     </v-content>
+
+    <v-footer app>
+      <span>&copy; 2019</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Layout from './components/Layout';
 
 export default {
-  name: 'App',
+    name: 'App',
 
-  components: {
-    HelloWorld,
+    components: {
+        Layout,
+    },
+  props: {
+    source: String,
   },
-
-  data: () => ({
-    //
-  }),
-  created() {
-    this.$router.push({path: '/home'})
-  }
+    data: () => ({
+      drawer: null,
+    }),
+    created() {
+      // this.$vuetify.theme.dark = true
+      this.$router.push({name: 'Overview'})
+    }
 };
 </script>
