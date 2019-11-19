@@ -1,10 +1,9 @@
 <template>
   <v-row>
-    <v-col cols="4" md
-      v-for="item in products" :key="item">
+    <v-col class="col-md-4" v-for="(item,index) in products" :key="index">
       <v-card elevation="10">
         <v-img
-          src="http://picsum.photos/140"
+          :src="'http://picsum.photos/140?random='+index"
           class="white--text align-end"
           gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
           height="140"
@@ -48,7 +47,9 @@ export default {
       products: [
         {title:'Tropfen'},
         {title:'Verdampfer'},
-        {title:'Cookies'}
+        {title:'Cookies'},
+        {title:'Tee'},
+        {title:'Pulver'}
       ],
       name: {
         type: String
