@@ -14,7 +14,7 @@
           dark
           flat
         >
-          <v-toolbar-title>Login form</v-toolbar-title>
+          <v-toolbar-title>Login</v-toolbar-title>
           <v-spacer/>
           <v-tooltip bottom>
             <template v-slot:activator="{ on }">
@@ -65,7 +65,8 @@
         </v-card-text>
         <v-card-actions>
           <v-spacer/>
-          <v-btn color="primary" to="/home">
+          <v-btn color="primary"
+             @click="$emit('login', true); $router.push({name:'Overview'})">
             Login
           </v-btn>
         </v-card-actions>
@@ -75,9 +76,17 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      source: String
+export default {
+  props: {
+    source: String
+  },
+  methods: {
+    login() {
+      db.connect()
+        .then(()=>{
+          this.$emit('login', true)
+        })
     }
   }
+}
 </script>

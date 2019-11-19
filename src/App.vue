@@ -33,29 +33,11 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar
-      app
-      clipped-right
-      src="http://picsum.photos/1920/1080?blur"
-      dark
-    >
-      <v-toolbar-title>Gras-Shoppers</v-toolbar-title>
-      <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-cart</v-icon>
-      </v-btn>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
-    </v-app-bar>
+    <nav-bar :is-logged-in="isLoggedIn"/>
 
     <v-content light>
-      <v-container
-        class="fill-height"
-        fluid
-      >
-        <router-view/>
+      <v-container fluid class="fill-height">
+        <router-view @login="isLoggedIn=$event"/>
       </v-container>
     </v-content>
 
@@ -67,22 +49,28 @@
 
 <script>
 import Layout from './components/Layout';
+import NavBar from './views/NavBar'
 
 export default {
-    name: 'App',
+  name: 'App',
 
-    components: {
-        Layout,
-    },
-  props: {
-    source: String,
+  components: {
+    NavBar,
+    Layout
   },
-    data: () => ({
+  props: {
+    source: String
+  },
+  data() {
+    return {
+      isLoggedIn: false,
       drawer: false,
-    }),
-    created() {
-      // this.$vuetify.theme.dark = true
-      this.$router.push({name: 'Overview'})
     }
-};
+  },
+  methods: {
+  },
+  created() {
+    this.$router.push({name: 'Overview'})
+  }
+}
 </script>
