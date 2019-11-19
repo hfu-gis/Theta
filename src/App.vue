@@ -33,11 +33,26 @@
       </v-list>
     </v-navigation-drawer>
 
-    <nav-bar :is-logged-in="isLoggedIn"/>
+    <v-app-bar app right dark
+       src="http://picsum.photos/1920/100?blur">
+      <v-toolbar-title>Gras-Shoppers</v-toolbar-title>
+      <v-spacer />
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
+      <v-btn icon :to="{name:'Order'}">
+        <v-icon>mdi-cart</v-icon>
+      </v-btn>
+
+      <v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
+        <v-icon>mdi-login</v-icon>
+      </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
+    </v-app-bar>
 
     <v-content light>
       <v-container fluid class="fill-height">
-        <router-view @login="isLoggedIn=$event"/>
+        <router-view  @login="isLoggedIn=$event"/>
       </v-container>
     </v-content>
 
@@ -49,13 +64,11 @@
 
 <script>
 import Layout from './components/Layout';
-import NavBar from './views/NavBar'
 
 export default {
   name: 'App',
 
   components: {
-    NavBar,
     Layout
   },
   props: {
