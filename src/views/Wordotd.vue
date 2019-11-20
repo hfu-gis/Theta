@@ -1,6 +1,8 @@
 <template>
     <div class="body-1">
-        <!-- HTML-Code aus dem Body-Tag hier einfügen -->
+        <body>
+
+        </body>
     </div>
 </template>
 
