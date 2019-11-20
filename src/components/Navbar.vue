@@ -15,7 +15,7 @@
 
         <v-navigation-drawer app ^v-model="drawer" class="indigo">
             <p>test</p>
-        </v-navigation-drawer>^
+        </v-navigation-drawer>
 
     </nav>
 </template>
