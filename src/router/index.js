@@ -5,7 +5,7 @@ import Home from "../views/Home";
 import Kontakt from "../views/Kontakt";
 import Impressum from "../views/Impressum";
 import Nutzungsbedingungen from "../views/Nutzungsbedingungen";
-import Passwort_zurücksetzen from "../views/Passwort_zurücksetzen";
+import Passwort_zuruecksetzen from "../views/Passwort_zuruecksetzen";
 import Registrierung from "../views/Registrierung";
 import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
@@ -38,8 +38,8 @@ export default new VueRouter({
             component: Nutzungsbedingungen
         },
         {
-            path: '/Passwort_zurücksetzen',
-            component: Passwort_zurücksetzen
+            path: '/Passwort_zuruecksetzen',
+            component: Passwort_zuruecksetzen
         },
         {
             path: '/Registrierung',

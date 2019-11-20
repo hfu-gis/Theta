@@ -13,7 +13,7 @@
 
 <script>
     export default {
-        name: "Passwort_zurücksetzen"
+        name: "Passwort_zuruecksetzen"
     }
 </script>
 
