@@ -1,5 +1,6 @@
 <template>
     <div class="body-1">
+        <body>
         <h1>Kontakt</h1>
         <h2>Ansprechpartner: Team Theta</h2>
         <h3>Kontaktiere uns per Mail:</h3>
@@ -15,6 +16,7 @@
             <div>
             </div>
             <input type="submit" value="Abschicken" />
+        </body>
     </div>
 </template>
 

@@ -9,6 +9,8 @@ import Passwort_zurücksetzen from "../views/Passwort_zurücksetzen";
 import Registrierung from "../views/Registrierung";
 import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
+import Passwort_Vergessen from "../views/Passwort_Vergessen";
+import HelloWorld from "../components/HelloWorld";
 
 
 Vue.use(VueRouter)
@@ -50,6 +52,14 @@ export default new VueRouter({
         {
             path:'/Datenschutzbestimmungen',
             component: Datenschutzbestimmungen
+        },
+        {
+            path: '/Passwort_Vergessen',
+            component: Passwort_Vergessen
+        },
+        {
+            path:'HelloWorld',
+            component: HelloWorld
         },
     ]
 })
