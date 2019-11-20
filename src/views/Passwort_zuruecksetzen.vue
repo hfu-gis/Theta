@@ -9,6 +9,7 @@
             <input type="Text" name="E-Mail" value="">
             <button type="submit" id="form_send" name="form[send]" class="btn btn-green">Senden</button>
         </body>
+    </div>
 </template>
 
 <script>
