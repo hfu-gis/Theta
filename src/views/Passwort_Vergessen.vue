@@ -1,6 +1,5 @@
 <template>
     <div class="body-1">
-        <body>
         <h1>Passwort vergessen?</h1>
         <h3>Geben Sie zum Zurücksetzen des Passworts Ihre HFU Mailadresse ein:</h3>
         <div class="textbox">
@@ -10,7 +9,6 @@
         </br>
         <input type="button" class="btn" value="Mail Senden">
     </div>
-    </body>
     </div>
 </template>
 
