@@ -1,6 +1,5 @@
 <template>
     <div class="body-1">
-        <body>
         <h1>Kontakt</h1>
         <h2>Ansprechpartner: Team Theta</h2>
         <h3>Kontaktiere uns per Mail:</h3>
@@ -13,7 +12,6 @@
             <textarea id="Nachricht" name="Nachricht" cols="20" rows="5"></textarea>
             <input type="submit" value="Abschicken" />
         </form>
-        </body>
     </div>
 </template>
 
