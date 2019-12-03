@@ -2,6 +2,8 @@
     <div class="body-1">
         <h2><a href="Login.vue">Login</a></h2>
         <h2><a href="Registrierung.vue">Registrierung</a></h2>
+        <h2><a href="Impressum.vue">Impressum</a></h2>
+        <h2><a href="Nutzungsbedingungen.vue"</a></h2>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <h3><a href="Kontakt.vue">Kontakt</a></h3>
     </div>
