@@ -11,9 +11,10 @@ import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import HelloWorld from "../components/HelloWorld";
+import Wordotd from "../views/Wordotd";
 
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
@@ -60,6 +61,10 @@ export default new VueRouter({
         {
             path:'HelloWorld',
             component: HelloWorld
+        },
+        {
+            path:"/Wordotd",
+            component: Wordotd
         },
     ]
 })
