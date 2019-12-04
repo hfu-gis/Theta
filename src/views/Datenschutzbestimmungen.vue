@@ -40,7 +40,7 @@
 
 
 
-        <p>Quelle: <a href="https://www.anwalt.de/vorlage/muster-datenschutzerklaerung.php" rel="nofollow">Muster-Datenschutzerklärung von anwalt.de</a></p>
+       
     </div>
 </template>
 
