@@ -3,7 +3,7 @@
         <h1>Impressum</h1><br>
         <br><h2>Dictionary DM</h2><br>
         <h3>Leon Schäfer<br>Am Großhausberg 2
-            <br>78120 Furtwangen im Schwarzwald
+            <br>78120 Furtwangen im Schwarzwald<br>
         <br>dm.dictionary-support.de</h3><br>
         <br><h2>Rechtsberatung</h2>
         <br><h3>Anwaltskanzlei Wittkämper</h3>
