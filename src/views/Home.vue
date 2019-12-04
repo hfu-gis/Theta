@@ -7,7 +7,7 @@
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <h3><a href="Kontakt.vue">Kontakt</a></h3>
         <h3><a href="Nutzungsbedingungen.vue">Nutzungsbedingungen</a></h3>
-        <h3><a href="Impressum.vue">Impressum</a></h3>
+        <h3><a href="Datenschutzbestimmungen.vue">Datenschutzbestimmungen</a></h3>
 
     </div>
 </template>
