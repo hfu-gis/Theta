@@ -1,6 +1,6 @@
 <template>
     <div class="body-1">
-            <header> <h1><strong> Registrierung </strong></h1></header>
+            <h1><strong> Registrierung </strong></h1>
 
             <p> Bitte fülle folgende Informationen aus, um dich zu registrieren:</p>
 
@@ -26,7 +26,7 @@
                 <option value="MI">MI - Medien Informatik</option>
             </select>
 
-            <p><input type="checkbox" name="Nutzungsbedingungen" value="Nutzungsbedingungen"> Ich stimme hiermit den <a href="Nutzungsbedingungen.html"> Nutzungsbedingungen</a> zu.</p>
+            <p><input type="checkbox" name="Nutzungsbedingungen" value="Nutzungsbedingungen"> Ich stimme hiermit den <a href="Nutzungsbedingungen.vue"> Nutzungsbedingungen</a> zu.</p>
             <button type="button" onclick="alert('Du bist nur noch wenige Schritte entfernt! In wenigen Minuten bekommst du eine E-Mail mit einem Bestätigungslink von uns zugesendet!')">Registrieren</button>
     </div>
 </template>
