@@ -6,7 +6,7 @@ import Kontakt from "../views/Kontakt";
 import Impressum from "../views/Impressum";
 import Nutzungsbedingungen from "../views/Nutzungsbedingungen";
 import Passwort_zuruecksetzen from "../views/Passwort_zuruecksetzen";
-import Registrierung from "../views/Registrierung";
+import Registrierung from "../views/Registration";
 import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
