@@ -10,10 +10,7 @@ const firebaseConfig = {
         appId: "1:677331986350:web:a30e068a6af118c6e14a3f",
         measurementId: "G-HBTHY64QP3"
     };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();}
-const db = firebase.initializeApp(firebaseConfig).firestore()
-export default db
+export const db = firebase.initializeApp(firebaseConfig).firestore
+// This is not always necessary
 const { TimeStamp, GeoPoint } = firebase.firestore
 export { TimeStamp, GeoPoint }
