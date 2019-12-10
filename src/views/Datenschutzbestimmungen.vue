@@ -1,5 +1,6 @@
 <template>
     <div class="body-1">
+        <h1> Datenschutzbestimmungen</h1>
         <p><strong>Datenschutzerklärung</strong></p>
         <p><p>In dieser Datenschutzerklärung informieren wir Sie über die Verarbeitung personenbezogener Daten bei der Nutzung dieser Website.</p>
         <p><strong>Verantwortlicher</strong></p>

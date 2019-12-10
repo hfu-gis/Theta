@@ -1,6 +1,5 @@
 <template>
     <div class="body-1">
-        <body>
     <v-app id="inspire">
         <v-content>
             <v-container
@@ -83,7 +82,6 @@
             </v-container>
         </v-content>
     </v-app>
-        </body>
     </div>
 </template>
 
