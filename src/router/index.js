@@ -11,7 +11,7 @@ import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import HelloWorld from "../components/HelloWorld";
-import Wordotd from "../views/Wordotd";
+import Wordotd from "../views/Yourwordotd";
 
 
 Vue.use(VueRouter);

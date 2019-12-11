@@ -1,89 +1,166 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer
-      v-model="drawer"
-      app dark
-      right
+  <v-app id="keep">
+    <v-app-bar
+            app
+            clipped-left
+            color="amber"
     >
-      <v-list dense>
-        <v-list-item link :to="{name:'Home'}">
-          <v-list-item-action>
-            <v-icon>mdi-spa</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link :to="{name:'Wordotd'}">
-          <v-list-item-action>
-            <v-icon>mdi-cart</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Word of the Day</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link :to="{name:'Registrierung'}">
-          <v-list-item-action>
-            <v-icon>mdi-settings</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Registrierung</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+      <v-app-bar-nav-icon @click="drawer = !drawer" />
+      <span class="title ml-3 mr-5">Google&nbsp;<span class="font-weight-light">Keep</span></span>
+      <v-text-field
+              solo-inverted
+              flat
+              hide-details
+              label="Search"
+              prepend-inner-icon="search"
+      />
+
+      <v-spacer />
+    </v-app-bar>
+
+    <v-navigation-drawer
+            v-model="drawer"
+            app
+            clipped
+            color="grey lighten-4"
+    >
+      <v-list
+              dense
+              class="grey lighten-4"
+      >
+        <template v-for="(item, i) in items">
+          <v-row
+                  v-if="item.heading"
+                  :key="i"
+                  align="center"
+          >
+            <v-col cols="6">
+              <v-subheader v-if="item.heading">
+                {{ item.heading }}
+              </v-subheader>
+            </v-col>
+            <v-col
+                    cols="6"
+                    class="text-right"
+            >
+              <v-btn
+                      small
+                      text
+              >edit</v-btn>
+            </v-col>
+          </v-row>
+          <v-divider
+                  v-else-if="item.divider"
+                  :key="i"
+                  dark
+                  class="my-4"
+          />
+          <v-list-item
+                  v-else
+                  :key="i"
+                  link
+          >
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title class="grey--text">
+                {{ item.text }}
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </template>
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app right dark
-       src="http://picsum.photos/1920/100?blur">
-      <v-toolbar-title>D(M)ICTIONARY</v-toolbar-title>
-      <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-btn icon :to="{name:'Order'}">
-        <v-icon>mdi-cart</v-icon>
-      </v-btn>
-
-      <v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
-        <v-icon>mdi-login</v-icon>
-      </v-btn>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
-    </v-app-bar>
-
-    <v-content light>
-      <v-container fluid class="fill-height">
-        <router-view  @login="isLoggedIn=$event"/>
+    <v-content>
+      <v-container
+              fluid
+              class="grey lighten-4 fill-height"
+      >
+        <v-row
+                justify="center"
+                align="center"
+        >
+          <v-col class="shrink">
+            <v-tooltip right>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                        :href="source"
+                        icon
+                        large
+                        target="_blank"
+                        v-on="on"
+                >
+                  <v-icon large>mdi-code-tags</v-icon>
+                </v-btn>
+              </template>
+              <span>Source</span>
+            </v-tooltip>
+            <v-tooltip right>
+              <template v-slot:activator="{ on }">
+                <v-btn
+                        icon
+                        large
+                        href="https://codepen.io/johnjleider/pen/zgxbYO"
+                        target="_blank"
+                        v-on="on"
+                >
+                  <v-icon large>mdi-codepen</v-icon>
+                </v-btn>
+              </template>
+              <span>Codepen</span>
+            </v-tooltip>
+          </v-col>
+        </v-row>
       </v-container>
     </v-content>
-
-    <v-footer
-            color="green"
-            padless
-    >
-      <v-row
-              justify="center"
-              no-gutters
-      >
-        <v-btn
-                v-for="link in links"
-                :key="link"
-                color="white"
-                text
-                rounded
-                class="my-2"
-        >
-          {{ link }}
-        </v-btn>
-        <v-col
-                class="grey py-4 text-center white--text"
-                cols="12"
-        >
-          {{ new Date().getFullYear() }} — <strong>D(M)ICTIONARY</strong>
-        </v-col>
-      </v-row>
-    </v-footer>
   </v-app>
 </template>
+
+<script>
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+      items: [
+        { icon: 'lightbulb_outline', text: 'Notes' },
+        { icon: 'touch_app', text: 'Reminders' },
+        { divider: true },
+        { heading: 'Labels' },
+        { icon: 'add', text: 'Create new label' },
+        { divider: true },
+        { icon: 'archive', text: 'Archive' },
+        { icon: 'delete', text: 'Trash' },
+        { divider: true },
+        { icon: 'settings', text: 'Settings' },
+        { icon: 'chat_bubble', text: 'Trash' },
+        { icon: 'help', text: 'Help' },
+        { icon: 'phonelink', text: 'App downloads' },
+        { icon: 'keyboard', text: 'Keyboard shortcuts' },
+      ],
+    }),
+  }
+</script>
+
+<style>
+  #keep .v-navigation-drawer__border {
+    display: none
+  }
+</style>
+
+<script>
+  export default {
+    props: {
+      source: String,
+    },
+    data: () => ({
+      drawer: null,
+    }),
+  }
+</script>
 
 <script>
 import Layout from './components/Layout';
