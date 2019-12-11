@@ -7,6 +7,33 @@
         <h3><a href="Nutzungsbedingungen.vue">Nutzungsbedingungen</a></h3>
         <h3><a href="Datenschutzbestimmungen.vue">Datenschutzbestimmungen</a></h3>
 
+        <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <input type="text" placeholder="Search..">
+        </div>
+
+
+
+
+                <v-row
+                        align="center"
+                        justify="center"
+                >
+                    <v-col cols="12">
+                        <v-hover v-slot:default="{ hover }">
+                            <v-card
+                                    :elevation="hover ? 12 : 2"
+                                    class="mx-auto"
+                                    height="350"
+                                    max-width="350"
+                            >
+                                <v-card-text class="my-4 text-center title">Hover over me!</v-card-text>
+                            </v-card>
+                        </v-hover>
+                    </v-col>
+                </v-row>
 
     </div>
 </template>
@@ -15,6 +42,8 @@
     export default {
         name: "Home"
     }
+
+
 </script>
 
 <style scoped>
