@@ -10,7 +10,7 @@ import Registrierung from "../views/Registration";
 import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
-import Wordotd from "../views/Wordotd";
+import Yourwordotd from "../views/Yourwordotd";
 
 
 Vue.use(VueRouter);
@@ -59,8 +59,8 @@ export default new VueRouter({
         },
 
         {
-            path:"/Wordotd",
-            component: Wordotd
+            path:"/Yourwordotd",
+            component: Yourwordotd
         },
     ]
 })
