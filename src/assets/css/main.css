@@ -1,4 +1,10 @@
 /*Grunsätzliches Seitenlayout:*/
+body-1 {
+  font-size: 14px;
+  color: #000000;
+  background-color: #FFFFFF;
+  font-family: "Helvetica Neue"
+}
 html {
   color: '#222';
   font-size: 1em;

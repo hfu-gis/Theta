@@ -1,6 +1,6 @@
 <template>
     <div class="body-1">
-            <h1><strong> Registrierung </strong></h1></br>
+            <h1><strong> Registrierung </strong></h1> </br>
 
             <p> Bitte fülle folgende Informationen aus, um dich zu registrieren:</p>
         <v-form
@@ -53,14 +53,15 @@
         ></v-checkbox>
 
         <v-btn
-                y:disabled="!valid"
+                :disabled="!valid"
                 color="success"
                 class="mr-4"
-                @click="validate">Registrieren
+                @click="
+validate">Registrieren
         </v-btn><br/>
+
         </v-form>
             <a href="Nutzungsbedingungen.vue"> *Nutzungsbedingungen</a>
-
         </v-form>
     </div>
 </template>
@@ -69,12 +70,6 @@
     export default {
         name: "Registrierung",
         methods: {
-            validation() {
-                if (this.$refs.form.validate()) {
-                    alert("sucsess")
-                }
-            }
-
         },
         data: () => ({
             valid: true
