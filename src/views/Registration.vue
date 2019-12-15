@@ -1,6 +1,6 @@
 <template>
     <div class="body-1">
-            <h1><strong> Registration </strong></h1>
+            <h1><strong> Registrierung </strong></h1></br>
 
             <p> Bitte fülle folgende Informationen aus, um dich zu registrieren:</p>
         <v-form
@@ -48,7 +48,7 @@
         <v-checkbox
                 v-model="checkbox"
                 :rules="[v => !!v || 'You must agree to continue!']"
-                label="Ich stimme hiermit den Nutzungsbedingungen zu"
+                label="Ich stimme hiermit den *Nutzungsbedingungen zu"
                 required
         ></v-checkbox>
 
@@ -56,13 +56,11 @@
                 y:disabled="!valid"
                 color="success"
                 class="mr-4"
-                @click="validation"
-        >
-            Registrieren
-        </v-btn>
+                @click="validate">Registrieren
+        </v-btn><br/>
+        </v-form>
+            <a href="Nutzungsbedingungen.vue"> *Nutzungsbedingungen</a>
 
-
-            <button type="button" onclick="alert('Du bist nur noch wenige Schritte entfernt! In wenigen Minuten bekommst du eine E-Mail mit einem Bestätigungslink von uns zugesendet!')">Registrieren</button>
         </v-form>
     </div>
 </template>
