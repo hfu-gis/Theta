@@ -50,7 +50,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left>
+    <v-app-bar app left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
       <v-spacer />
       <v-toolbar-title>D(M)ICTIONARY</v-toolbar-title>
