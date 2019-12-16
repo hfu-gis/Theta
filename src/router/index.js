@@ -12,7 +12,6 @@ import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import Yourwordotd from "../views/Yourwordotd";
 
-
 Vue.use(VueRouter);
 
 export default new VueRouter({
