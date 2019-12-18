@@ -1,100 +1,120 @@
 <template>
-  <v-app id="keep">
-    <v-app-bar
-            app
-            clipped-left
-            color="amber"
-    >
-      <v-app-bar-nav-icon @click="drawer = !drawer" />
-      <span class="title ml-3 mr-5">Google&nbsp;<span class="font-weight-light">Keep</span></span>
-      <v-text-field
-              solo-inverted
-              flat
-              hide-details
-              label="Search"
-              prepend-inner-icon="search"
-      />
-
-      <v-spacer />
-    </v-app-bar>
-
+  <v-app id="inspire">
     <v-navigation-drawer
             v-model="drawer"
             app
-            clipped
+            clipped-left
             color="grey lighten-4"
     >
-      <v-list
-              dense
-              class="grey lighten-4"
-      >
-        <template v-for="(item, i) in items">
-          <v-row
-                  v-if="item.heading"
-                  :key="i"
-                  align="center"
-          >
-            <v-col cols="6">
-              <v-subheader v-if="item.heading">
-                {{ item.heading }}
-              </v-subheader>
-            </v-col>
-            <v-col
-                    cols="6"
-                    class="text-right"
-            >
-              <v-btn
-                      small
-                      text
-              >edit</v-btn>
-            </v-col>
-          </v-row>
-          <v-divider
-                  v-else-if="item.divider"
-                  :key="i"
-                  dark
-                  class="my-4"
-          />
-          <v-list-item
-                  v-else
-                  :key="i"
-                  link
-          >
-            <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title class="grey--text">
-                {{ item.text }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
+      <v-list dense>
+        <v-list-item link :to="{name:'Home'}">
+          <v-list-item-action>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="{name:'Login'}">
+          <v-list-item-action>
+            <v-icon>mdi-login</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Login</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="{name:'Yourwordotd'}">
+          <v-list-item-action>
+            <v-icon>mdi-file-word</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Your Word of the Day</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="{name:'Registrierung'}">
+          <v-list-item-action>
+            <v-icon>mdi-account-plus</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Registrieren</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link :to="{name:'Kontakt'}">
+          <v-list-item-action>
+            <v-icon>mdi-account-question</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Kontakt</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
-    <v-content>
-      <v-container
-              fluid
-              class="grey lighten-4 fill-height"
-      >
-        <v-row
-                justify="center"
-                align="center"
-        >
-          <v-col class="shrink">
-          </v-col>
-        </v-row>
+    <v-app-bar app left>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
+      <v-spacer />
+      <v-toolbar-title>D(M)ICTIONARY</v-toolbar-title>
+      <v-spacer />
+      <v-btn v-if="!isLoggedIn" icon :to="{name:'Login'}">
+        <v-icon>mdi-login</v-icon>
+      </v-btn>
+    </v-app-bar>
+
+    <v-content light>
+      <v-container fluid class="fill-height">
+        <router-view  @login="isLoggedIn=$event"/>
       </v-container>
     </v-content>
+
+    <v-footer
+            color="green"
+            padless
+    >
+      <v-row
+              justify="center"
+              no-gutters
+      >
+        <v-btn
+                v-for="link in links"
+                :key="link"
+                color="white"
+                text
+                rounded
+                class="my-2"
+        >
+          {{ link }}
+        </v-btn>
+        <v-col
+                class="grey py-4 text-center white--text"
+                cols="12"
+        >
+          {{ new Date().getFullYear() }} — <strong>D(M)ICTIONARY</strong>
+        </v-col>
+      </v-row>
+    </v-footer>
   </v-app>
 </template>
 
-<style>
-  #keep .v-navigation-drawer__border {
-    display: none
-  }
-</style>
-
 <script>
+  import Layout from './components/Layout';
+  export default {
+    name: 'App',
+    components: {
+      Layout
+    },
+    props: {
+      source: String
+    },
+    data() {
+      return {
+        isLoggedIn: false,
+        drawer: false,
+      }
+    },
+    methods: {
+    },
+    created() {
+      this.$router.push({name: 'Overview'})
+    }
+  }
 </script>
