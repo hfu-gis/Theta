@@ -1,51 +1,53 @@
 <template>
     <div class="body-1">
-        <h2><a href="Login.vue">Login</a></h2>
-        <h2><a href="Registrierung.vue">Registrierung</a></h2>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <h3><a href="Kontakt.vue">Kontakt</a></h3>
-        <h3><a href="Nutzungsbedingungen.vue">Nutzungsbedingungen</a></h3>
-        <h3><a href="Datenschutzbestimmungen.vue">Datenschutzbestimmungen</a></h3>
-
-        <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <input type="text" placeholder="Search..">
-        </div>
-
-
-
-
-                <v-row
-                        align="center"
-                        justify="center"
+        <v-row>
+            <v-col
+                    cols="12"
+                    sm="6"
+            >
+                <v-hover
+                        v-slot:default="{ hover }"
+                        open-delay="200"
                 >
-                    <v-col cols="12">
-                        <v-hover v-slot:default="{ hover }">
-                            <v-card
-                                    :elevation="hover ? 12 : 2"
-                                    class="mx-auto"
-                                    height="350"
-                                    max-width="350"
-                            >
-                                <v-card-text class="my-4 text-center title">Hover over me!</v-card-text>
-                            </v-card>
-                        </v-hover>
-                    </v-col>
-                </v-row>
+                    <v-card
+                            :elevation="hover ? 16 : 2"
+                            class="mx-auto"
+                            height="350"
+                            max-width="350"
+                    >
+                        <v-card-text class="font-weight-medium mt-12 text-center subtitle-1">
+                            Open Delay (Mouse enter)
+                        </v-card-text>
+                    </v-card>
+                </v-hover>
+            </v-col>
 
+            <v-col
+                    cols="12"
+                    sm="6"
+            >
+                <v-hover
+                        v-slot:default="{ hover }"
+                        close-delay="200"
+                >
+                    <v-card
+                            :elevation="hover ? 16 : 2"
+                            class="mx-auto"
+                            height="350"
+                            max-width="350"
+                    >
+                        <v-card-text class="font-weight-medium mt-12 text-center subtitle-1">
+                            Close Delay (Mouse leave)
+                        </v-card-text>
+                    </v-card>
+                </v-hover>
+            </v-col>
+        </v-row>
     </div>
 </template>
 
 <script>
     export default {
         name: "Home"
-    }
-
-
+        }
 </script>
-
-<style scoped>
-
-</style>
