@@ -11,54 +11,63 @@ import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import Yourwordotd from "../views/Yourwordotd";
-
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
         {
             path: '/Home',
+            name: 'Home',
             component: Home
         },
         {
             path: '/Login',
+            name: 'Login',
             component: Login
         },
         {
          path:'/Kontakt' ,
+            name: 'Kontakt',
             component: Kontakt
         },
         {
             path:'/Impressum',
+            name: 'Impressum',
             component: Impressum
         },
         {
             path:'/Nutzungsbedingungen',
+            name: 'Nutzungsbedingungen',
             component: Nutzungsbedingungen
         },
         {
             path: '/Passwort_zuruecksetzen',
+            name: 'Passwort_zuruecksetzen',
             component: Passwort_zuruecksetzen
         },
         {
             path: '/Registrierung',
+            name: 'Registrierung',
             component: Registrierung
         },
         {
             path:'/Registrierung_successful',
+            name: 'Registrierung_successfull',
             component: Registrierung_succesful
         },
         {
             path:'/Datenschutzbestimmungen',
+            name: 'Datenschutzbestimmungen',
             component: Datenschutzbestimmungen
         },
         {
             path: '/Passwort_Vergessen',
+            name: 'Passwort_Vergessen',
             component: Passwort_Vergessen
         },
-
         {
             path:"/Yourwordotd",
+            name: 'Yourwordotd',
             component: Yourwordotd
         },
     ]
