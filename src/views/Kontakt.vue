@@ -11,12 +11,10 @@
                        oneclick="e-mail">E-Mail
                 </v-btn>
         </a>
-
         <h3>oder fülle unser Kontaktformular aus:</h3>
         <form id="Kontaktformular" name="Kontaktformular" action="">
             <label for="absender">Deine E-Mail-Adresse:</label>
             <input type="Text" name="WordBox" id="wordbox">
-
             <input type="text" id="Absender" name="Absender"/>
             <label for="nachricht">Deine Nachricht:</label>
             <input type="Text" name="WordBox" id="wordbox">
