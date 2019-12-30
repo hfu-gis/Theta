@@ -16,15 +16,12 @@
     }
 </script>
 <style scoped>
-    /* CSS für diese Seite hier einfügen */
-
     h1 {
         text-align: center;
         margin: 20% 0 5% 0;
     }
 
     #wordbox {
-        /*opacity: 0;*/
         text-allign: center;
         margin: 30px auto 0;
         display: block;
