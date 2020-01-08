@@ -50,14 +50,7 @@
                 </v-hover>
             </v-col>
         </v-row>
-
-        <v-text-field
-                solo-inverted
-                flat
-                hide-details
-                label="Search"
-                prepend-inner-icon="mdi-magnify"
-        ></v-text-field>
+        
     </div>
 
 </template>
