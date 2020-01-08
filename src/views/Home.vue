@@ -50,7 +50,7 @@
                 </v-hover>
             </v-col>
         </v-row>
-        
+
     </div>
 
 </template>
