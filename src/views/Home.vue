@@ -1,5 +1,12 @@
 <template>
     <div class="body-1">
+        <v-text-field
+                solo-inverted
+                flat
+                hide-details
+                label="Wort suchen"
+                prepend-inner-icon="mdi-magnify"
+        ></v-text-field>
         <v-row>
             <v-col
                     cols="12"
@@ -16,7 +23,7 @@
                             max-width="350"
                     >
                         <v-card-text class="font-weight-medium mt-12 text-center subtitle-1">
-                            Open Delay (Mouse enter)
+                            <br><h1>Your Word of the Day</h1>
                         </v-card-text>
                     </v-card>
                 </v-hover>
@@ -37,7 +44,7 @@
                             max-width="350"
                     >
                         <v-card-text class="font-weight-medium mt-12 text-center subtitle-1">
-                            Close Delay (Mouse leave)
+                            <br><h1>Was steckt dahinter?</h1>
                         </v-card-text>
                     </v-card>
                 </v-hover>
