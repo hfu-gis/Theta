@@ -1,32 +1,34 @@
 <template>
-    dark
-    padless
-    >
-    <v-card
-            class="flex"
-            flat
-            tile
-    >
-        <v-card-title class="teal">
-            <strong class="subheading">Get connected with us on social networks!</strong>
-
-            <v-spacer></v-spacer>
-
-            <v-btn
-                    v-for="icon in icons"
-                    :key="icon"
-                    class="mx-4"
-                    dark
-                    icon
+    <div id="app">
+        <v-app id="inspire">
+            <v-footer
+                    color="green"
+                    padless
             >
-                <v-icon size="24px">{{ icon }}</v-icon>
-            </v-btn>
-        </v-card-title>
-
-        <v-card-text class="py-2 white--text text-center">
-            {{ new Date().getFullYear() }} — <strong>D(M)ICTIONARY</strong>
-        </v-card-text>
-    </v-card>
+                <v-row
+                        justify="center"
+                        no-gutters
+                >
+                    <v-btn
+                            v-for="link in links"
+                            :key="link"
+                            color="white"
+                            text
+                            rounded
+                            class="my-2"
+                    >
+                        {{ link }}
+                    </v-btn>
+                    <v-col
+                            class="green py-4 text-center white--text"
+                            cols="12"
+                    >
+                        {{ new Date().getFullYear() }} — <strong>D(M)ICTIONARY</strong>
+                    </v-col>
+                </v-row>
+            </v-footer>
+        </v-app>
+    </div>
 </template>
 
 <script>
