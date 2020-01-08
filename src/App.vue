@@ -43,12 +43,12 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item link :to="{name:'Kontakt'}">
+        <v-list-item link :to="{name:'About'}">
           <v-list-item-action>
-            <v-icon>mdi-account-question</v-icon>
+            <v-icon>mdi-information-outline</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Kontakt</v-list-item-title>
+            <v-list-item-title>Was steckt dahinter ?</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -84,8 +84,7 @@
   import Footer from './components/Footer';
   export default {
     components:{
-      Footer,
-      'app-footer': Footer
+      Footer
     },
     props: {
       source: String,
