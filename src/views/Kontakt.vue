@@ -14,19 +14,16 @@
         </a>
         <h3>oder fülle unser Kontaktformular aus:</h3>
 
-        <form id="Kontaktformular" name="Kontaktformular" action="">
             <h4> Deine E-Mail-Adresse</h4>
             <div>
             <input type="Text" name="WordBox" id="wordbox">
-            <input type="text" id="Absender" name="Absender"/>
     </div>
             <h4> Deine Nachricht</h4>
             <input type="Text" name="WordBox" id="wordbox">
-            <input type="text" id="Nachricht" name="Nachricht"/>
+
             <v-btn text outlined shaped
                    oneclick="absenden">absenden
             </v-btn>
-        </form>
     </div>
 
 </template>
