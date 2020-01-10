@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login'
 import Home from "../views/Home";
+import FAQ from "../views/FAQ";
 import Kontakt from "../views/Kontakt";
 import Impressum from "../views/Impressum";
 import Nutzungsbedingungen from "../views/Nutzungsbedingungen";
@@ -11,6 +12,7 @@ import Registrierung_succesful from "../views/Registrierung_succesful";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import Yourwordotd from "../views/Yourwordotd";
+import About from "../views/About";
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -19,6 +21,11 @@ export default new VueRouter({
             path: '/Home',
             name: 'Home',
             component: Home
+        },
+        {
+            path: '/FAQ',
+            name: 'FAQ',
+            component: FAQ
         },
         {
             path: '/Login',
@@ -69,6 +76,11 @@ export default new VueRouter({
             path:"/Yourwordotd",
             name: 'Yourwordotd',
             component: Yourwordotd
+        },
+        {
+            path:"/About",
+            name: "About",
+            component: About
         },
     ]
 })
