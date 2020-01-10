@@ -62,7 +62,7 @@
       <v-toolbar-title>D(M)ICTIONARY</v-toolbar-title>
       <v-spacer />
 
-      <v-btn icon :to="{name:'Login'}">
+      <v-btn icon :to="{name:'#/Login'}">
         <v-icon>mdi-login</v-icon>
       </v-btn>
     </v-app-bar>
@@ -73,11 +73,10 @@
       </v-container>
     </v-content>
 
-    <v-footer
       <Footer />
-    </v-footer>
 
   </v-app>
+
 </template>
 
 <script>
@@ -97,3 +96,4 @@
     },
   }
 </script>
+
