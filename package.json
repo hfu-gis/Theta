@@ -7,6 +7,7 @@
     "build": "node_modules/.bin/vue-cli-service build"
   },
   "dependencies": {
+    "@firebase/storage": "latest",
     "@mdi/font": "^3.6.95",
     "core-js": "^3.3.2",
     "firebase": "^7.5.2",
@@ -14,8 +15,8 @@
     "serve": "^11.2.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
-    "vuetify": "^2.1.0",
-    "@firebase/storage": "latest"
+    "vuescroll": "^4.14.4",
+    "vuetify": "^2.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.0.0",

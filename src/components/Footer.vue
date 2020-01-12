@@ -16,10 +16,11 @@
     <div id="app">
         <v-app id="inspire">
             <v-footer
-                    color="green"
+                    color="#04B45F"
                     padless
                     absolute
                     fluid
+                    fixed
             >
                 <v-row display="flex" align-content="center" justify="center" no-gutters>
                     <v-col justify="center" class="green footer-col-one py-4 text-center white--text" cols="12">
