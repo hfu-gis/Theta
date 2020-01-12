@@ -4,6 +4,7 @@
             v-model="drawer"
             app
             clipped
+            color="#04B45F"
     >
       <v-list dense>
 
@@ -56,10 +57,13 @@
 
     <v-app-bar
             app clipped-left
+            color="#04B45F"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
       <v-spacer />
-      <v-toolbar-title>D(M)ICTIONARY</v-toolbar-title>
+      <v-toolbar-title>
+     
+        <img src="/dmlogocut.png" width="100" height="70" /> </v-toolbar-title>
       <v-spacer />
 
       <v-btn icon :to="{name:'#/Login'}">
@@ -92,7 +96,7 @@
       drawer: null,
     }),
     created () {
-      this.$vuetify.theme.dark = true
+      this.$vuetify.theme.light = true
     },
   }
 </script>
