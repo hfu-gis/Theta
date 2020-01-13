@@ -62,10 +62,14 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"  />
       <v-spacer />
       <v-toolbar-title>
-     
+
         <img src="/dmlogocut.png" width="100" height="70" /> </v-toolbar-title>
       <v-spacer />
 
+      <v-btn color="#04B45F" link :to="{name:'Login'}">
+
+        <v-icon>mdi-login</v-icon>
+      </v-btn>
       <v-btn icon :to="{name:'#/Login'}">
         <v-icon>mdi-login</v-icon>
       </v-btn>

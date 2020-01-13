@@ -7,8 +7,8 @@
                     fluid
             >
                 <v-row
-                        align="center-5"
-                        justify="center-5"
+                        align="center-1"
+                        justify="center-1"
                 >
                     <v-col
                             cols="12"
