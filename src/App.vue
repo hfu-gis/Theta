@@ -27,6 +27,15 @@
           </v-list-item-content>
         </v-list-item>
 
+        <v-list-item link :to="{name:'Dictionary'}">
+          <v-list-item-action>
+            <v-icon>mdi-book-search-outline</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Dictionary</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item link :to="{name:'Login'}">
           <v-list-item-action>
             <v-icon>mdi-login</v-icon>

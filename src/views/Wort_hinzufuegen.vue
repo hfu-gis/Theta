@@ -7,7 +7,7 @@
                 solo-inverted
                 flat
                 hide-details
-                label="Wort hinzufügen"
+                label="Wort hinzufuegen"
                 prepend-inner-icon="mdi-plus"
         ></v-text-field>
         <br>
@@ -15,15 +15,12 @@
                justify="center"
                oneclick="add">Hinzufügen
         </v-btn>
-
-
-
     </div>
 </template>
 
 <script>
     export default {
-        name: "Wort hinzufügen"
+        name: "Wort_hinzufuegen"
 
 
     }

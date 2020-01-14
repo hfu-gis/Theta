@@ -14,7 +14,7 @@
 
 <script>
     export default {
-        name: "Passwort_Vergessen"
+        "name": "Passwort_vergessen"
     }
 </script>
 

@@ -1,3 +1,8 @@
+<style scoped>
+    h1{
+        color: '#04545F'
+    }
+</style>
 <template>
     <div class="body-1">
         <v-text-field

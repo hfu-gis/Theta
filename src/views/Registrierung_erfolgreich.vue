@@ -19,7 +19,7 @@
 
 <script>
     export default {
-        name: "Registrierung_succesful"
+        name: "Registrierung_erfolgreich"
     }
 </script>
 
