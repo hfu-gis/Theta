@@ -30,7 +30,7 @@
                             <v-card-text>
                                 <v-form>
                                     <v-text-field
-                                            label="Login"
+                                            label="HFU Mail"
                                             name="login"
                                             prepend-icon="mdi-account"
                                             type="text"
@@ -43,6 +43,8 @@
                                             prepend-icon="mdi-textbox-password"
                                             type="Passwort"
                                     />
+                                    <a href="Passwort_Vergessen.html">Passwort vergessen?</a>
+
                                 </v-form>
                             </v-card-text>
                             <v-card-actions>
