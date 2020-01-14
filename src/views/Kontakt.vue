@@ -8,7 +8,9 @@
         <h3>Kontaktiere uns per Mail:</h3>
         </div>
         <a href="mailto: dm.dictionary-support.de">
-                <v-btn text outlined shaped
+            <v-btn
+                    align-center
+                       color="#04B45F"
                        oneclick="e-mail">E-Mail
                 </v-btn>
         </a>
@@ -16,12 +18,15 @@
 
             <h4> Deine E-Mail-Adresse</h4>
             <div>
-            <input type="Text" name="WordBox" id="wordbox">
-    </div>
-            <h4> Deine Nachricht</h4>
-            <input type="Text" name="WordBox" id="wordbox">
 
-            <v-btn text outlined shaped
+            <input type="Text" name="WordBox" id="wordbox" >
+    </div>
+
+            <h4> Deine Nachricht</h4>
+        <input type="Text" name="WordBox" id="wordbox" >
+
+            <v-btn align-center
+                   color="#04B45F"
                    oneclick="absenden">absenden
             </v-btn>
     </div>
@@ -54,11 +59,11 @@
         margin: 30px auto 0;
         display: block;
         width: 300px;
-        height: 40px;
+        height: 100px;
         font-size: 30px;
         background: #fff;
         border-radius: 6px;
-        color: #000000;
+        color: #04B45F;
         transition: 1s linear;
     }
 
