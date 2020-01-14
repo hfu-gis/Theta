@@ -2,10 +2,14 @@
     <div class="body-1">
         <h1>Kontakt</h1>
         <div>
-
+            <v-form>
+                <v-container>
+                    <v-row>
         <h2>Ansprechpartner: Team Theta</h2>
-
-        <h3>Kontaktiere uns per Mail:</h3>
+                    </v-row>
+                </v-container>
+            </v-form>
+        <p>Kontaktiere uns per Mail:</p>
         </div>
         <a href="mailto: dm.dictionary-support.de">
             <v-btn
@@ -14,17 +18,31 @@
                        oneclick="e-mail">E-Mail
                 </v-btn>
         </a>
-        <h3>oder fülle unser Kontaktformular aus:</h3>
 
-            <h4> Deine E-Mail-Adresse</h4>
-            <div>
+        <p> oder fülle unser Kontaktformular aus:</p>
 
-            <input type="Text" name="WordBox" id="wordbox" >
-    </div>
-
-            <h4> Deine Nachricht</h4>
-        <input type="Text" name="WordBox" id="wordbox" >
-
+                <v-form>
+                    <v-container>
+                        <v-row>
+                            <v-col cols="12" sm="6" >
+                                <v-text-field
+                                        label="Deine E-Mail Adresse"
+                                        outlined
+                                ></v-text-field>
+                            </v-col>
+                        </v-row>
+                <v-row>
+                    </v-col>
+                    <v-col cols="12" md="6">
+                        <v-textarea
+                                outlined
+                                name="input-7-4"
+                                label="Deine Nachricht"
+                        ></v-textarea>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-form>
             <v-btn align-center
                    color="#04B45F"
                    oneclick="absenden">absenden
@@ -40,18 +58,6 @@
 </script>
 
 <style scoped>
-    h1 {
-        text-align: center;
-    }
-    h2 {
-        text-align: center;
-    }
-    h3 {
-        text-align: center;
-    }
-    h4 {
-        text-align: center;
-    }
 
     #wordbox {
         /*opacity: 0;*/
