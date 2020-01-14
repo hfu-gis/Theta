@@ -17,6 +17,15 @@
           </v-list-item-content>
         </v-list-item>
 
+        <v-list-item link :to="{name:'Wort_hinzufuegen'}">
+          <v-list-item-action>
+            <v-icon>mdi-shape-square-plus</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title> Wort hinzufügen</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item link :to="{name:'Login'}">
           <v-list-item-action>
             <v-icon>mdi-login</v-icon>

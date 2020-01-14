@@ -13,6 +13,7 @@ import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
 import Passwort_Vergessen from "../views/Passwort_Vergessen";
 import Yourwordotd from "../views/Yourwordotd";
 import About from "../views/About";
+import Wort_hinzufuegen from "../views/Wort_hinzufeugen";
 Vue.use(VueRouter);
 
 export default new VueRouter({
@@ -78,9 +79,14 @@ export default new VueRouter({
             component: Yourwordotd
         },
         {
-            path:"/About",
+            path:'/About',
             name: "About",
             component: About
+        },
+        {
+            path: '/Wort_hinzufuegen',
+            name: "Wort_hinzufuegen",
+            component: Wort_hinzufuegen
         },
     ]
 })
