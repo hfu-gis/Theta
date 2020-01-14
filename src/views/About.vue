@@ -1,6 +1,6 @@
 <template>
     <div class="body-1">
-        <h1>Was steckt hinter D(M) Dictionary?</h1>
+       <br><h1>Was steckt hinter D(M) Dictionary?</h1>
         <br>
         <br>
         <h2>Die Idee dahinter:</h2>
