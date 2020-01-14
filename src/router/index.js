@@ -6,17 +6,22 @@ import FAQ from "../views/FAQ";
 import Kontakt from "../views/Kontakt";
 import Impressum from "../views/Impressum";
 import Nutzungsbedingungen from "../views/Nutzungsbedingungen";
-import Passwort_zuruecksetzen from "../views/Passwort_zuruecksetzen";
+import Passwort_zuruecksetzen from "../views/Passwort-zurücksetzen";
 import Registrierung from "../views/Registrierung";
-import Registrierung_succesful from "../views/Registrierung_succesful";
+import Registrierung_succesful from "../views/Registrierung-erfolgreich";
 import Datenschutzbestimmungen from "../views/Datenschutzbestimmungen";
-import Passwort_Vergessen from "../views/Passwort_Vergessen";
+import Passwort_Vergessen from "../views/Passwort-vergessen";
 import Yourwordotd from "../views/Yourwordotd";
 import About from "../views/About";
 Vue.use(VueRouter);
 
 export default new VueRouter({
     routes: [
+        {
+            path: '/Dictionary',
+            name: 'Dictionary',
+            component: Dictionary
+        },
         {
             path: '/Home',
             name: 'Home',

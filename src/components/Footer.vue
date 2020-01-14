@@ -23,14 +23,14 @@
                     fixed
             >
                 <v-row display="flex" align-content="center" justify="center" no-gutters>
-                    <v-col justify="center" class="green footer-col-one py-4 text-center white--text" cols="12">
+                    <v-col justify="center" class=" footer-col-one py-4 text-center white--text" cols="12">
                          <v-breadcrumbs class="footer-menue" :items="links" divider=" "> </v-breadcrumbs>
                         <v-btn icon large href="https://www.instagram.com/?hl=de" target="_blank" v-on="on">
                             <v-icon>mdi-instagram</v-icon>
                         </v-btn>
                     </v-col>
                     <v-col
-                            class="green py-4 text-center white--text"
+                            class=" py-4 text-center white--text"
                             cols="12"
                     >
                         {{ new Date().getFullYear() }} — <strong>D(M)ICTIONARY</strong>
