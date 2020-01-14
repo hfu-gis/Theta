@@ -4,6 +4,7 @@
             v-model="drawer"
             app
             clipped
+            temporary
             color="#04B45F"
     >
       <v-list dense>
