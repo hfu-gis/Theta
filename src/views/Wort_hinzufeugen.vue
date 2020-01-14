@@ -10,6 +10,13 @@
                 label="Wort hinzufügen"
                 prepend-inner-icon="mdi-plus"
         ></v-text-field>
+        <br>
+        <v-btn text outlined shaped
+               justify="center"
+               oneclick="add">Hinzufügen
+        </v-btn>
+
+
 
     </div>
 </template>
