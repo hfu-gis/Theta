@@ -63,16 +63,14 @@
       <v-spacer />
       <v-toolbar-title>
 
-        <img src="../public/images/dmlogocut.png" width="100" height="72" /> </v-toolbar-title>
+        <img src="../public/Images/dmlogocut.png" width="100" height="72" /> </v-toolbar-title>
       <v-spacer />
 
       <v-btn color="#04B45F" link :to="{name:'Login'}">
 
         <v-icon>mdi-login</v-icon>
       </v-btn>
-      <v-btn icon :to="{name:'#/Login'}">
-        <v-icon>mdi-login</v-icon>
-      </v-btn>
+
     </v-app-bar>
 
     <v-content light>
