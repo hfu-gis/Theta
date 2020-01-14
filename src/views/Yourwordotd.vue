@@ -1,15 +1,31 @@
 <template>
     <div class="body-1">
         <h1> Your Word of the Day </h1>
-        <FORM name="WordForm">
-            <input type="Text" name="WordBox" id="wordbox">
-            <v-btn text outlined shaped
-                   justify="center"
-                   oneclick="generate">generieren
-            </v-btn>
-        </FORM>
+        <v-card
+                class="mx-auto"
+                max-width="344"
+        >
+            <v-card-text>
+                <div>Your Word of the Day</div>
+                <p class="display-1 text--primary">
+                    be•nev•o•lent
+                </p>
+                <div class="text--primary">
+                    Bedeutung/ Erklärung <br>
+                </div>
+            </v-card-text>
+            <v-card-actions>
+                <v-btn align-center
+                       color="#04B45F"
+                       oneclick="generieren">Generieren
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+
     </div>
+
 </template>
+
 <script>
     export default {
         name: "Yourwordotd"
