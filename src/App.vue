@@ -63,7 +63,7 @@
       <v-spacer />
       <v-toolbar-title>
 
-        <img src="/dmlogocut.png" width="100" height="70" /> </v-toolbar-title>
+        <img src="../public/images/dmlogocut.png" width="100" height="70" /> </v-toolbar-title>
       <v-spacer />
 
       <v-btn color="#04B45F" link :to="{name:'Login'}">

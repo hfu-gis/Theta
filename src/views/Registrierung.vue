@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="body-1">
         <v-app id="inspire">
             <v-content>
